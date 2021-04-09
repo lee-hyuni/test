@@ -1,0 +1,65 @@
+#banner {
+    width:100%; padding:120px 0px; box-sizing:border-box;
+    background:url(../img/bg3.jpg) no-repeat center/cover fixed;
+    text-align:center; position:relative;
+
+    &::before {
+        content: ""; position: absolute; top: 0; right: 0; bottom: 0; left: 0;
+        background-color: rgba(0, 0, 0, 0.2); display: block; z-index:1;
+    }
+
+    .inner {
+        width:1180px; margin:0px auto; position:relative; z-index:2;
+
+        span {
+            font:12px/1 "Playfair Display"; color:#a38348; margin-bottom:15px;
+        }
+    
+        h1 {
+            font:35px/1 "Playfair Display"; color:#fff; margin-bottom:25px;
+            letter-spacing:2px;
+        }
+    
+        p {
+            font:12px/1.4 "arial"; color:#ddd;
+            width:30%; margin:0px auto 35px;
+        }
+
+        a {
+            display:inline-block;
+            width:100px; height:30px;
+            border:1px solid #a38348;
+            font:10px/30px "Playfair Display"; color:#fff;
+            letter-spacing:1px; transition:0.5s;
+
+            &:hover {
+                background:#a38348; color:#fff;
+            }
+        }
+    }
+
+}
+
+/* ---------------tablet----------------*/
+@media screen and (max-width:$tablet) {
+    #banner {
+        padding:100px 0px;
+
+        .inner {
+            width:100%; padding:0px 30px; box-sizing:border-box;
+
+            p {
+                width:100%;
+            }
+        }
+    
+    }
+}
+
+/* ---------------c.p----------------*/
+@media screen and (max-width:$mobile) {
+    #banner {
+        padding:80px 0px;
+    }
+
+}

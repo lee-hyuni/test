@@ -1,0 +1,124 @@
+#header_sub {
+    width:100%; padding:7px 0px 0px; background:#f5f4f1; border-bottom:1px solid #aaa;
+    .inner {
+        width:1180px; margin:0px auto; position:relative;
+        .wrap{
+            h1 { float: left; margin-right: 30px;
+                a {
+                    font:20px/1 "Playfair Display"; color:#a38348;
+                }
+            }
+
+            .menuWeb{ float:left;
+                li { float:left;
+                    a {
+                        font:14px/4 "arial"; color:#666; display:block;
+                        padding:0px 10px; margin-right: 10px;
+                        position: relative; transition:0.5s;
+
+                        &:hover {
+                            color:#a38348;
+                        }
+                    }
+                }
+            }
+
+            .util { float:right;
+                li { float:left; line-height: 50px;
+
+                    input[type=text] {
+                        width:120px; height:20px; border-top: none; border-right: none;
+                        border-left: none;
+                        border-bottom:1px solid #dbd9d4; background:#f5f4f1;
+                    }
+
+                    &:nth-of-type(2) a {margin-left:0px;}
+                    &:nth-of-type(4) a {padding:0px 0px 0px 10px;}
+
+                    a {
+                        font:14px/4 "arial"; color:#666; display:block;
+                        padding:0px 10px; margin-left: 10px;
+
+                        &:hover {color:#a38348;}
+                    }
+                }
+            }
+
+            .btnCall {
+                position:absolute; right:30px; top:50%; transform:translateY(-50%);
+                font-size:18px; color:#a38348; display:none;
+            }
+
+            .menuMo {
+                position:fixed; top:0px; left:-270px; background:#f5f4f1; z-index:10; width:270px; height:100%; box-sizing:border-box; padding:34px 30px; transition:0.5s; border-right:1px solid rgba(163, 131, 72, 0.4);
+    
+                &.on {
+                    left:0px;
+                }
+    
+                h1 {
+                    position:absolute; left:20px; bottom:20px;
+    
+                    >a {
+                        display:block; font:20px/1 "Playfair Display";
+                        color:#a38348; letter-spacing:1px;
+                    }
+                    span {font:12px/1 "arial"; color:#aaa; }
+                }
+    
+                .searchBar {
+    
+                    position: absolute; left:50%; transform:translateX(-50%); top:50px;
+    
+                    >input[type=text] {
+                        float:left;
+                        width:110px; height:20px;
+                        padding:0px 5px;
+                        box-sizing: border-box;
+                        border-top: none; border-right: none;
+                        border-left: none;
+                        border-bottom:1px solid #dbd9d4;
+                        background:#f5f4f1;
+                        font:10px/20px "arial"; color:#ccc;
+                    }
+    
+                    a {
+                        float: left;
+                        font:14px/20px "arial"; color:#666;
+                        padding:0px 5px;
+                    }
+                }
+    
+                #gnbMo { position:absolute; left:50%; transform:translateX(-50%); top:100px;
+                    li {
+                        a {
+                            display:block; width:100%; padding:8px 0px; margin:8px 0px;
+                            font:22px/1 "arial";
+                            color: rgba(163, 131, 72, 0.6); text-align:center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* ---------------tablet----------------*/
+@media screen and (max-width:$tablet) {
+    #header_sub { padding:10px 0px 10px;
+        .inner {
+            width:100%; padding:0px 30px; box-sizing:border-box;
+            .wrap{
+                .menuWeb{ display: none;}
+                .util { display: none;}
+
+                .btnCall {display:block;}
+            }
+        }
+    }
+}
+
+/* ---------------c.p----------------*/
+@media screen and (max-width:$mobile) {
+    // header
+}

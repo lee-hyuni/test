@@ -1,0 +1,230 @@
+.location {
+    .sub_visual {
+        background:url(../img/bg7.jpg) no-repeat center/cover;
+        position: relative;
+
+        &::before {
+            content: ""; position: absolute; top: 0; right: 0; bottom: 0; left: 0; background-color: rgba(0, 0, 0, 0.3); display: block;
+        }
+        
+        .inner1 {
+            h1 {
+                &::before {content:"LOCATION"; opacity: 0.3;}
+                &::after {background:#f5f4f1;}
+
+                span {color:#f5f4f1;}
+            }
+        }
+    }
+
+    .inner2 {
+
+        h1 {
+            font:20px/1 "Noto Serif KR"; color:#444; margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .tapList { width:100%; text-align: center; margin-bottom:60px;
+
+            li {
+                display:inline-block; margin:0px 20px;
+
+                a {
+                    display:block; padding:10px 20px;
+                    font:12px/1 "arial"; color:#555;
+                    border-bottom:2px solid #bbb;
+                    transition:0.5s;
+
+                    &:hover {
+                        transform:translateY(-5px);
+                    }
+                }
+
+                &.on {
+                    a {
+                        font:bold 12px/1 "arial"; color:#444;
+                        border-bottom:2px solid #999;
+                    }
+                }
+                
+            }
+        }
+        
+        .kakaoMap {
+            width:100%; height:500px; background:#000; margin-bottom: 25px;
+            filter:Grayscale(40%);
+        }
+
+        .wrap { width:100%; margin-bottom:100px;
+
+            .address{
+                float: left;
+
+                li {
+                    font:12px/1.8 "Noto Serif KR"; color:#888;
+                }
+            }
+
+            .button {
+                float:right;
+                
+                li { width:230px; text-align:center; font-size:0;
+
+                    a {
+                        display:inline-block; padding:10px 20px; margin-bottom:5px;
+                        border:1px solid #a38348; box-sizing:border-box;
+                        font:12px/1 "Noto Serif KR"; color:#a38348;
+
+                        &:hover {
+                            background:#a38348; color:#fff;
+                        }
+                    }
+
+                    &:nth-of-type(1) a {width:100%;}
+                    .trf_on {width:30%; margin-right:3%;}
+                    .trf_off {width:30%;}
+
+                    .trf_on, .trf_off {
+                        &.on {
+                            background:#a38348; color:#fff;
+                        }
+                    }
+
+                    span {
+                        display: inline-block; text-align: left;
+                        width:37%; font:11px/1 "Noto Serif KR"; color:#555;
+                    }
+                }
+            }
+        }
+
+        article {
+            float:left; width:380px; margin-right:20px;
+
+            &:nth-of-type(3) {margin-right:0px;}
+
+            .pic {
+                width:70px; height:70px; margin-bottom:10px;
+                background-repeat:no-repeat; background-position:center;
+                background-size:contain;
+            }
+
+            &:nth-of-type(1) .pic {background-image:url(../img/bybus.png);}
+            &:nth-of-type(2) .pic {background-image:url(../img/bysubway.png);}
+            &:nth-of-type(3) .pic {background-image:url(../img/bycar.png);}
+
+            h2 {
+                font:20px/1 "Playfair Display"; color:#444;
+                border-bottom:1px solid #a38348;
+                padding:10px 0px; margin-bottom:20px;
+            }
+
+            ul {
+                li {
+                    margin-bottom:25px;
+
+                    p {font:14px/1.4 "Noto Serif KR"; color:#555;}
+                    span {font:11px/1 "Noto Serif KR"; color:#999;}
+                }
+            }
+        }
+    }
+}
+
+/* ---------------tablet----------------*/
+@media screen and (max-width:$tablet) {
+    // content
+    .location {
+        .inner2 {
+
+            .wrap { width:100%; margin-bottom:100px;
+    
+                .address{
+                    width:50%; margin-bottom:30px;
+
+                    li {
+                        font:12px/1.8 "Noto Serif KR"; color:#888;
+                    }
+                }
+    
+                .button {
+                    
+                    li { width:230px; text-align:center; font-size:0;
+    
+                        a {
+                            display:inline-block; padding:10px 20px; margin-bottom:5px;
+                            border:1px solid #a38348; box-sizing:border-box;
+                            font:12px/1 "Noto Serif KR"; color:#a38348;
+    
+                            &:hover {
+                                background:#a38348; color:#fff;
+                            }
+                        }
+    
+                        &:nth-of-type(1) a {width:100%;}
+                        .trf_on {width:30%; margin-right:3%;}
+                        .trf_off {width:30%;}
+    
+                        span {
+                            display: inline-block; text-align: left;
+                            width:37%; font:11px/1 "Noto Serif KR"; color:#555;
+                        }
+                    }
+                }
+            }
+    
+            article {
+                width:49%; margin-right:2%;
+    
+                &:nth-of-type(2n) {margin-right:0px;}
+            }
+        }
+    }
+
+}
+
+/* ---------------C.P----------------*/
+@media screen and (max-width:$mobile) {
+    // content
+    .location {
+        .inner2 {
+
+            .wrap {
+                .address {
+                    width: 100%;
+                }
+    
+                .button {
+                    width: 100%;
+    
+                    li {
+                        &:nth-of-type(1) {
+                            width:100%;
+                        }
+    
+                        &:nth-of-type(2) {
+                            width:100%;
+                            text-align: right;
+    
+                            .trf_off, .trf_on {
+                                text-align:center;
+                            }
+                        }
+                    }
+                }
+        
+                article {
+                    width:100%; margin-right:0%;
+                    margin-bottom:10px;
+    
+                    &:nth-of-type(1) {
+                        margin-bottom:30px;
+                    }
+                }
+            }
+
+           
+        }
+    }
+
+}

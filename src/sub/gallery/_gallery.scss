@@ -1,0 +1,230 @@
+.gallery {
+    .sub_visual {
+        background:url(../img/bg3.jpg) no-repeat center/cover;
+        position: relative;
+
+        &::before {
+            content: ""; position: absolute; top: 0; right: 0; bottom: 0; left: 0; background-color: rgba(0, 0, 0, 0.2); display: block;
+        }
+        
+        .inner1 {
+            h1 {
+                &::before {content:"GALLERY"; opacity: 0.3;}
+                &::after {background:#f5f4f1;}
+
+                span {color:#f5f4f1;}
+
+            }
+        }
+    }
+
+    .inner2 {
+
+        .wrap { width:100%; margin-bottom:25px;
+
+            select {
+                float:left; width:15%; height:30px;
+                background:#f5f4f1; border:1px solid #cfc7b7;
+                font:10px/1 "arial"; color:#777; letter-spacing:1px;
+            }
+
+            h1 {
+                float:left; width:70%; text-align: center;
+                font:20px/1 "Noto Serif KR"; color:#444;
+            }
+
+            #search {
+                float:left; width:15%; font-size:0; height:30px;
+                border:1px solid #cfc7b7; box-sizing: border-box;
+
+                input[type=text] {
+                    background:#f5f4f1; border:none; width:80%;
+                    height:100%; padding:0px 10px; box-sizing:border-box;
+                    float: left; font:10px/1 "arial"; color:#777;
+                    letter-spacing:1px;
+                }
+
+                button {
+                    background:#fff; height:100%; border:none; width:20%;
+                    font-size:14px; color:#777;
+                    float: right;
+                }
+            }
+
+        }
+
+        
+        .tapList { width:100%; text-align: center; margin-bottom:80px;
+
+            li {
+                display:inline-block; margin:0px 20px;
+
+                a {
+                    display:block; padding:10px 20px;
+                    font:12px/1 "arial"; color:#555;
+                    border-bottom:2px solid #bbb;
+                    transition:0.5s;
+
+                    &:hover {
+                        transform:translateY(-5px);
+                    }
+
+                    &.on {
+                        font:bold 12px/1 "arial"; color:#444;
+                        border-bottom:2px solid #999;
+
+                    }
+                }
+            }
+        }
+
+        #gallery {
+            width:100%;
+        
+            ul.list {
+                width:100%; opacity:0; transition:1s; transform:translateY(200px);
+        
+                &.on {opacity:1; transform:translateY(0px);}
+        
+                // &::after {
+                //     content:""; display:block; clear:both;
+                // }
+        
+                >li {
+                    width:20%; box-sizing:border-box; padding:12px 10px; float:left; overflow:hidden;
+
+                    .box {
+                        width:100%; background:#fff;
+                        >a {
+                            width:100%; position: relative;
+                            .mainImg {
+                                width:100%; min-height:150px;
+                                filter:Saturate(0.6) Sepia(5%);
+                            }
+    
+                            .buddy {
+                                width:35px; height:35px;
+                                position: absolute; right:20px; bottom:20px;
+                                box-shadow:5px 5px 5px rgba(0,0,0,0.4);
+                                opacity:0; transition:1s;
+                                transform:translateY(30px);
+                            }
+                        }
+    
+                        .inner {
+                            width:100%; padding:30px 20px; box-sizing:border-box;
+    
+                            p {
+                                font:9px/1 "airal"; color:#aaa;
+                                margin-bottom: 7px; display: inline-block;
+                            }
+    
+                            h1 {
+                                font:16px/1.4 "Playfair Display"; color:#666;
+                                margin-bottom:20px;
+                            }
+    
+                            .icon {
+                                .heart {
+                                    font-size:14px;
+                                    color:#aaa;
+                                    margin-right: 15px;
+
+                                    &.on {
+                                        color:rgb(241, 172, 183);
+                                    }
+                                }
+    
+                                .comment {
+                                    font-size:14px; color:rgb(160, 216, 238);
+                                    // color:rgb(160, 216, 238);
+                                }
+                            }
+                        }
+    
+                        &:hover {
+                            .buddy{
+                                opacity: 1; transform:translateY(0px);
+                            }
+                            
+                            .inner {
+                                p { color:#777; border-bottom:1px solid #777;}
+                            }
+    
+    
+                        }
+                    }
+                }
+            }
+        
+            
+        }
+
+    }
+}
+
+.pop {
+    width:1000px; background:rgba(78, 74, 70, 0.8);
+    position:fixed; top:50%; left:50%; transform:translate(-50%,-50%); 
+    box-sizing:border-box; padding:50px; display:none; z-index:5;
+
+    img {
+        width:100%; height:100%; max-height:750px; object-fit:cover; 
+    }
+
+    span {
+        font:14px/1 "arial"; color:#fff;
+        position:absolute; top:20px; right:20px;
+        cursor:pointer;
+    }
+}
+
+/* ---------------tablet----------------*/
+@media screen and (max-width:$tablet) {
+    // content
+    .gallery {
+        .inner2 {
+
+            #gallery ul.list > li {
+                width:(100% / 4);
+            }
+
+        }
+    }
+
+}
+
+/* -----------------------------------*/
+@media screen and (max-width:799px){
+    #gallery ul.list > li {
+        width:(100% / 3);
+    }
+}
+
+/* ---------------C.P----------------*/
+@media screen and (max-width:$mobile) {
+    // content
+    .gallery {
+        .inner2 {
+
+            #gallery ul.list > li {
+                width:(100% / 2);
+            }
+
+        }
+    }
+
+}
+
+/* -----------------------------------*/
+@media screen and (max-width:479px){
+    .gallery {
+        .inner2 {
+
+            #gallery ul.list > li {
+                width:100%;
+            }
+
+        }
+    }
+}

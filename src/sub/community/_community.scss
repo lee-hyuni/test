@@ -1,0 +1,237 @@
+.community {
+    .sub_visual {
+        background:url(../img/bg4.jpg) no-repeat center/cover;
+        position: relative;
+
+        &::before {
+            content: ""; position: absolute; top: 0; right: 0; bottom: 0; left: 0; background-color: rgba(0, 0, 0, 0.3); display: block;
+        }
+        
+        .inner1 {
+            h1 {
+                &::before {content:"COMMUNITY"; opacity: 0.3;}
+                &::after {background:#f5f4f1;}
+
+                span {color:#f5f4f1;}
+
+            }
+        }
+    }
+
+    .inner2 {
+
+        h1 {
+            font:20px/1 "Noto Serif KR"; color:#444; margin-bottom: 20px;
+            text-align: center;
+        }
+
+        >p {
+            font:15px/1 "arial"; color:#666; margin-bottom:50px; text-align:center;
+
+            a {
+                display:inline-block; padding:7px 10px; margin-left: 15px;
+                border:1px solid #a38348;
+                font:15px/1 "arial"; color:#706041; transition:0.5s;
+
+                &:hover {
+                    background:#a38348; color:#fff;
+                    transform:translateX(10px);
+                }
+            }
+        }
+
+
+        .searchBox {
+            width:100%; background:#eae9e9; padding:30px; box-sizing:border-box;
+            margin-bottom: 60px; position: relative; text-align:center;
+
+            select {
+                background:#f5f4f1; border:none; width:15%; height:30px;
+                padding:5px; box-sizing: border-box;
+                margin-right:10px;
+            }
+
+            .search {
+                display: inline-block; padding:5px; box-sizing:border-box;
+                background:#f5f4f1; width:60%; text-align:left;
+                a { 
+                    font-size:16px; color:#555; background:#f5f4f1;
+                    padding:0px 10px 0px 5px; border-right:1px solid #bbb;
+                    
+                }
+                input[type=text] {
+                    background:#f5f4f1; border:none;  height:20px;
+                    padding:0px 15px; box-sizing: border-box;
+                    font:14px/1 "arial"; color:#777; width:90%;
+                }
+            }
+        }
+
+        h2 {
+            font:22px/1 "arial"; color:#333; margin-bottom: 30px;
+        }
+
+        table { width:100%; margin-bottom: 60px;
+            tr {
+                th {
+                    border-top:1px solid #777; border-bottom:1px solid #ccc;
+                    padding:25px; font:bold 13px/1 "arial"; color:#444;
+    
+                    &:nth-of-type(1) {width:10%;}
+                    &:nth-of-type(2) {width:40%;}
+                    &:nth-of-type(4) {width:15%;}
+                    &:nth-of-type(4) {width:15%;}
+                    &:nth-of-type(5) {width:20%;}
+                }
+    
+                td {
+                    border-bottom:1px solid #ccc; padding:30px; text-align: center;
+                    font:13px/1.5 "arial"; color:#666;
+    
+                    &:nth-of-type(1) {width:10%;}
+                    &:nth-of-type(2) {width:40%; text-align:left;}
+                    &:nth-of-type(4) {width:15%;}
+                    &:nth-of-type(4) {width:15%;}
+                    &:nth-of-type(5) {width:20%;}
+    
+    
+                    a {
+                        display:block; width:100%; font-weight:bold; color:#444;
+    
+                        i {color:rgba(163, 131, 72, 0.6); margin:0px 5px;}
+                    }
+                }
+
+                &:hover td {
+                    background:#f0eeec;
+                }
+            }
+        }
+
+        .pagination {
+            width:100%; text-align: center;
+
+            &::after {
+                content: ""; display:block; clear:both;
+            }
+            .numbers {
+                display:inline-block; font-size: 0;
+
+                a {
+                    display:inline-block; border:1px solid #a38348;
+                    width:30px; height:30px; font:12px/30px "arial"; color:#706041;
+                    text-align: center; margin:0px 5px; transition: 0.5s;
+
+                    &.on {
+                        border:1px solid #a38348; background:#a38348; color:#fff;
+                    }
+
+                    &.prev, &.next {
+                        border:1px solid #a38348; background:#a38348; color:#fff;
+                    }
+
+                    &:hover {
+                        background:#a38348; color:#fff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* ---------------tablet----------------*/
+@media screen and (max-width:$tablet) {
+    // content
+    .community {
+        .inner2 {
+
+            .searchBox {
+
+                select {
+                    margin-right:10px;
+                }
+
+                .search {
+
+                    input[type=text] {width:80%;}
+                   
+                }
+            }
+
+            table { 
+                tr {
+                    th { box-sizing: border-box;
+                        &:nth-of-type(1) {width:5%;}
+                        &:nth-of-type(2) {width:50%;}
+                        &:nth-of-type(3) {width:20%;}
+                        &:nth-of-type(4) {width:0%; display:none;}
+                        &:nth-of-type(5) {width:25%;}
+                    }
+
+                    td { box-sizing: border-box;
+                        &:nth-of-type(1) {width:5%;}
+                        &:nth-of-type(2) {width:50%;}
+                        &:nth-of-type(3) {width:20%;}
+                        &:nth-of-type(4) {width:0%; display:none;}
+                        &:nth-of-type(5) {width:25%;}
+                    }
+                }
+            }
+    
+            .pagination {
+                .numbers {
+                    
+                    a {
+                        &:nth-of-type(n+7):nth-of-type(-n+11) {display: none;}
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* ---------------C.P----------------*/
+@media screen and (max-width:$mobile) {
+    // content
+    .community {
+        .inner2 {
+
+            >p {
+                a {margin-top:10px;}
+            }
+
+            .searchBox {
+
+                select {
+                    margin-right:0px;
+                    margin-bottom: 10px;
+                    width:100%;
+                }
+
+                .search {
+                    width:100%;
+                    input[type=text] {width:80%;}
+                }
+            }
+            table { 
+                tr {
+                    th {
+                        &:nth-of-type(1) {width:5%;}
+                        &:nth-of-type(2) {width:75%;}
+                        &:nth-of-type(3) {width:20%;}
+                        &:nth-of-type(5) {width:0%; display:none;}
+                    }
+
+                    td {
+                        &:nth-of-type(1) {width:5%;}
+                        &:nth-of-type(2) {width:75%;}
+                        &:nth-of-type(3) {width:20%;}
+                        &:nth-of-type(5) {width:0%; display:none;}
+                    }
+                }
+            }
+        }
+    }
+
+}

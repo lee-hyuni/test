@@ -1,0 +1,301 @@
+.youtube {
+    .sub_visual {
+
+        background:url(../img/bg2.jpg) no-repeat center/cover;
+        position: relative;
+
+        &::before {
+            content: ""; position: absolute; top: 0; right: 0; bottom: 0; left: 0; background-color: rgba(0, 0, 0, 0.1); display: block;
+        }
+
+        
+        .inner1 {
+            h1 {
+                &::before {content:"YOUTUBE"; opacity: 0.2;}
+                &::after {background:#f5f4f1;}
+
+                span {color:#f5f4f1;}
+
+            }
+        }
+    }
+
+    .inner2 {
+        h1 {
+            font:20px/1 "Noto Serif KR"; color:#444; margin-bottom: 25px;
+            text-align: center;
+        }
+
+        >p {font:12px/1 "Noto Serif KR"; color:#888; margin-bottom:50px; text-align:center;}
+        #vidGallery {
+            width:100%; box-sizing:border-box;
+
+            &::after {
+                content:""; display:block; clear:both;
+            }
+
+            article {
+                width:380px; margin-right:20px;
+                margin-bottom:80px; box-sizing:border-box;
+                float:left;
+                
+
+                &:nth-of-type(3) {margin-right: 0px;}
+                &:nth-of-type(6) {margin-right: 0px;}
+
+                .pic {
+                    display:block; width:100%; height:200px; float:left; background-size:cover; background-repeat:no-repeat; background-position:center; position: relative;
+                    margin-bottom: 55px; transition:0.5s;
+
+                    &::before {
+                        content:""; display:none; width:100%; height:100%;
+                        position: absolute; top:0%; left:0%;
+                        background-color:rgba(0,0,0,0.2);
+                    }
+
+                    .play {
+                        position: absolute; left:50%; top:50%;
+                        transform:translate(-50%,-55%); color:#fff; opacity:0.4;
+                        font-size:42px;
+                    }
+
+                    span {
+                        font:12px/1 "arial"; color:#fff; position:absolute; left:15px;
+                        top:15px;
+                    }
+
+                    .con {
+                        position: absolute; left:50%; top:170px; transform:translateX(-50%);
+                        width:300px; height:60px; background:#c2b69f; padding:15px;
+                        // background:#e2e0dd;
+                        box-sizing:border-box; text-align:center; border-radius: 5px;
+                        overflow:hidden;
+
+                        h2 {
+                            font:14px/1.4 "airal"; color:#fafafa; text-align:center;
+                            margin-bottom:5px; 
+
+                            &::before {
+                                content:""; display:block; width:25px; height:2px;
+                                background:#9c9691;
+                                margin:0px auto; margin-bottom:10px;
+                            }
+                         }
+
+                    }
+
+                    &:hover {
+                        &::before {display: block;}
+
+                        .play {
+                            font-size:46px; opacity:0.7;
+                        }
+                    }
+
+                }
+
+                p {
+                    padding:0px 32px; box-sizing:border-box;
+                    font:12px/1.6 "arial"; color:#888; 
+                }
+            }
+        }
+    }
+
+    .art {
+        width:100%;  background:#eae7e2; padding:60px 0px; box-sizing:border-box;
+        position: relative;
+        
+        .inner {width:1180px; margin:0px auto; 
+
+            .txtBox{ float:left; width:40%;
+                h1 { 
+                    font:35px/1 "Playfair Display"; color:#555;
+                    margin-bottom: 40px;
+                }
+                p {
+                    font:14px/1.6 "arial"; color:#888; margin-bottom: 40px;
+                }
+
+                div{ text-align:center; margin-bottom:30px;
+                    a {
+                        font-size:25px; color:#aaa; display:inline-block;
+                        transition:0.5s;
+
+                        &:hover{
+                            &.prev {
+                                transform:translateX(-10px); color:#888
+                            }
+                            &.next {
+                                transform:translateX(10px); color:#888;
+                            }
+
+
+                        }
+                    }
+
+                    .prev {margin-right: 70px;}
+
+                }
+
+                .view {
+                    display: inline-block; padding:10px;
+                    position:relative;
+                    transition:1s;
+
+                    span {
+                        font:16px/1 "GillSans"; color:#666;
+                        position:relative; z-index:2;
+                        transition:0.5s;
+                    }
+
+                    svg {
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        top: 0px;
+                        left: 0px;
+                        overflow: visible;
+            
+                        rect {
+                            width: 100%;
+                            height: 100%;
+                            fill: transparent;
+                            stroke:#a38348;
+                            stroke-width:1;
+                            stroke-dasharray:300;
+                            stroke-dashoffset: 191;
+                            transform:rotate(180deg);
+                            transform-origin:center;
+                            transition:fill 0.5s 0s, stroke-dashoffset 0.5s 0.5s;
+                            //마우스 떠날때
+                        }
+                    }
+
+                    &:hover{
+
+                        transform:translate(25px,-5px);
+
+                        svg rect {
+                            fill :#a38348;
+                            stroke-dashoffset: 0;
+                            transition: stroke-dashoffset 1s 0s, fill 1s 1s;
+                        }
+
+                        span {
+                            color:#fff;
+                            transition:1s 1s;
+                        }
+                    }
+                }
+            }
+
+            #slider {
+                position:absolute; top:50%; right:0px;
+                transform:translateY(-50%); 
+                width:55%; height:350px; overflow: hidden;
+
+                .list { width:(100% * 4); height:100%; margin-left:-100%; //좌우 슬라이더는 항상 프레임 양 옆으로 여분의 패널이 있어야 되므로 margin-left:-100%추가
+                    li {width:(100% / 4); height:100%; float:left;
+
+                        &.box1 {background:url(../img/banner1.jpg) no-repeat center/cover;}
+                        &.box2 {background:url(../img/banner2.jpg) no-repeat center/cover;}
+                        &.box3 {background:url(../img/banner3.jpg) no-repeat center/cover;}
+                        &.box4 {background:url(../img/banner4.jpg) no-repeat center/cover;}
+                    }
+                }
+            }
+
+
+
+        }
+    }
+}
+
+
+/* ---------------tablet----------------*/
+@media screen and (max-width:$tablet) {
+    // content
+    .youtube {
+        .inner2 {
+            #vidGallery { 
+    
+                article {
+                    width:49%; margin-right:2%; margin-bottom: 50px;
+    
+                    &:nth-of-type(3) {margin-right:2%;}
+                    &:nth-of-type(2n) {margin-right:0px;}
+
+                    .pic {
+                        .con { width:85%;}
+                    }
+                }
+            }
+        }
+    
+        .art {
+            .inner {width:100%; padding:0px 30px; box-sizing:border-box;
+    
+                .txtBox{ width:40%;
+                    h1 { 
+                        margin-right:20px;
+                    }
+                    p { 
+                        margin-bottom: 30px; margin-right:20px;
+                    }
+    
+                    div{ text-align:left; margin-bottom:20px; 
+                    }
+                }
+    
+                #slider { 
+                    width:60%;
+                }
+    
+            }
+        }
+    }
+
+}
+
+/* ---------------C.P----------------*/
+@media screen and (max-width:$mobile) {
+    // content
+    .youtube {
+
+        .inner2{
+            #vidGallery { 
+    
+                article {
+                    width:100%; margin-right:0%;
+                }
+            }
+        }
+
+    
+    
+        .art { padding:40px 0px;
+            .inner { text-align: center;
+                .txtBox{ width:100%; float:none; margin-bottom:20px;
+                    h1 { 
+                        margin-right:20px;
+                    }
+                    p { 
+                        margin-bottom: 30px; margin-right:20px;
+                    }
+    
+                    div{ text-align:center; margin-bottom:20px; 
+                    }
+                }
+    
+                #slider {                                                           
+                    position: relative; display:block;
+                    transform:translateY(0%); bottom:0%;
+                    width:100%;
+                }
+    
+            }
+        }
+    }
+
+}

@@ -1,0 +1,40 @@
+#popup {
+    width:380px; position: relative; background:#333;
+    box-shadow:10px 10px 15px rgba(163, 131, 72,0.3);  
+    box-sizing:border-box; padding:25px 30px 15px;  color:#fff;
+
+    &::after {
+        content:''; display:block; width:100%; height:100%;
+        background:url(../img/popup.jpg) no-repeat center/cover;
+        position:absolute; top:0px; left:0px;
+        opacity:0.3; z-index:1;
+    }
+
+    .inner {
+        width:100%; height:400px;
+        border:1px solid #fff; text-align: center;
+
+        h1 {
+            font:25px/1 "Playfair Display"; color:#fff;
+            text-align: center; letter-spacing:3px;
+            margin-top:120px;
+        }
+
+        p {
+            width:75%; display: inline-block;
+            font:11px/1.6 "arial"; color:#bbb;
+            text-align:center; margin-top:40px;
+        }
+    }
+    .wrap {        
+        float:left; position: relative; z-index:3;
+
+        label {
+            font:bold 12px/1 "맑은 고딕"; color:#a38348; margin-left:4px;
+        }
+    }
+    .close {
+        float:right; font:12px/2 "arial"; color:#a38348;
+        position: relative; z-index:3;
+    }
+}

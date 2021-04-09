@@ -1,0 +1,304 @@
+#header {
+    width:100%; height:70px; padding:20px 0px 10px;
+    box-sizing:border-box;
+    border-bottom:1px solid rgba(163, 131, 72, 0.4); background:#fff;
+    position: fixed; top:0px; left:0px; z-index:5;
+    display:none;
+
+    .inner {
+        width:1180px; margin:0px auto; position:relative;
+
+        &::after {content:""; display:block; clear: both;}
+
+        > h1 {width:20%;
+
+            > a {
+                float:left; font:36px/1 "Playfair Display"; color:#a38348;
+            }
+        }
+
+        .menuWeb { float:right; width:80%;
+            #gnb {
+                width:100%;
+
+                >li {
+                    float:left; height:40px;
+
+                    >a {
+                        display:block; height:100%; font:14px/50px "arial"; color:#666; text-align:center; padding:0px 20px; margin:0px 15px;
+                        transition:0.5s;
+
+                        &:hover {
+                            color:#a38348;
+                        }
+                    }
+
+                    .sub {
+                        position: absolute; 
+                        width: 1180px; 
+                        height: 300px;
+                        background: #f5f4f1;
+                        border-right:1px solid rgba(163, 131, 72, 0.4);
+                        border-left:1px solid rgba(163, 131, 72, 0.4);
+                        box-sizing: border-box;
+                        left: 50%;
+                        margin-left: -590px;
+                        top: 50px; 
+                        display: none;
+                        overflow: hidden;
+
+                        h2 {
+                            font:140px/1 "Playfair Display"; 
+                            color:rgba(163, 131, 72,0.2);
+                            position:absolute; left:-10px; bottom:-4%;
+                            z-index:1;
+                        }
+
+                        >span {
+                            font:12px/1.6 "arial"; color:#ccc;
+                            width:20%;
+                            position: absolute; left:20px; top:40px;
+                        }
+
+                        ul {
+                            position: absolute; right:63px; top:25px;
+
+                            li { 
+                                a {
+                                    display:block; width:260px; height:50px;
+                                    padding:0px 15px; box-sizing: border-box;
+                                    font:14px/50px "airal"; color:#777;
+                                    position:relative;
+
+                                    >span {
+                                        width:8px; height:8px;
+                                        position: absolute; right:13px; top:36%;
+                                        transform: translateY(-50%);
+                                        transition:0.5s;
+                        
+                                        &::before {
+                                            content:""; display:block; width:100%; height:1px;
+                                            background:rgba(163, 131, 72, 0.5);
+                                            position:absolute; right:0px;
+                                            top:12px; transform:rotate(30deg); transform-origin: right center;
+                                        }
+                        
+                                        &::after {
+                                            content:""; display:block; width:160%; height:1px;
+                                            background:rgba(163, 131, 72, 0.5);
+                                            position:absolute; right:0px;
+                                            top:12px;
+                                        }
+                                    }
+
+                                    &:hover {
+                                        background:rgba(163, 131, 72,0.6);
+                                        color:#fff;
+
+                                        span {
+
+                                            transform:translate(5px,-50%);
+
+                                            &::before{
+                                                background:#fff;
+                                            }
+                                            &::after {
+                                                background:#fff;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .abBox {
+                            width:370px; height:235px;
+                            background:url(../img/gnb1.jpg) no-repeat center/cover;
+                            position: absolute; right:370px; top:37px;
+                            opacity:0.9;
+
+                            &::before {
+                                content:""; display:block; width:50px; height:2px;
+                                background:rgba(163, 131, 72, 0.8);
+                                position: absolute; top:-15px; left:0px;
+                            }
+                        }
+
+                        .searchBar {
+
+                            position: absolute; right:380px; top:40px;
+
+                            >input[type=text] {
+                                float:left;
+                                width:150px; height:20px;
+                                padding:0px 10px;
+                                box-sizing: border-box;
+                                border-top: none; border-right: none;
+                                border-left: none;
+                                border-bottom:1px solid #dbd9d4;
+                                background:#f5f4f1;
+                                font:12px/20px "arial"; color:#ccc;
+                                letter-spacing:1px;
+                            }
+
+                            a {
+                                float: left;
+                                font:14px/20px "arial"; color:#666;
+                                padding:0px 10px;
+                            }
+                        }
+
+                        .faqBox {
+                            width:450px; height:235px;
+                            position: absolute; right:370px; top:37px;
+
+                            &::before {
+                                content:""; display:block; width:50px; height:2px;
+                                background:rgba(163, 131, 72, 0.8);
+                                position: absolute; top:-15px; left:0px;
+                            }
+
+                            >div {
+                                float: left;
+                                width:49%; margin-right:2%;
+                                height:49%; margin-bottom:2%;
+
+                                &:nth-of-type(1) {
+                                    background:url(../img/gnb2_1.jpg) no-repeat right bottom/cover;
+                                }
+                                &:nth-of-type(2) {
+                                    margin-right:0%; background:#f5f4f1;
+                                }
+                                &:nth-of-type(3) {
+                                    margin-bottom:0%;
+                                    background:url(../img/gnb2_2.jpg) no-repeat right top/cover;
+                                }
+                                &:nth-of-type(4) {
+                                    margin-right:0%; margin-bottom:0%;
+                                    background:url(../img/gnb2_3.jpg) no-repeat left top/cover;
+                                }
+                            }
+                        }
+
+                        .gallBox {
+                            width:450px; height:180px;
+                            background:url(../img/gnb3.jpg) no-repeat center/cover;
+                            position: absolute; right:63px; bottom:27px;
+
+                            &::before {
+                                content:""; display:block; width:50px; height:2px;
+                                background:rgba(163, 131, 72, 0.8);
+                                position: absolute; top:-15px; left:0px;
+                            }
+                        }
+
+                        .youtBox {
+                            width:450px; height:180px;
+                            position: absolute; right:63px; bottom:27px;
+
+                            &::before {
+                                content:""; display:block; width:50px; height:2px;
+                                background:rgba(163, 131, 72, 0.8);
+                                position: absolute; top:-15px; left:0px;
+                            }
+
+                            video {
+                                width:100%; height:100%; object-fit:cover;
+                                opacity:0.8;
+                            }
+                        }
+
+                        .locaBox {
+                            position:absolute; right:53px; bottom:17px;
+
+                            a {
+                                float: left; padding:10px;
+                                margin-left:10px;
+                                font-size:25px; color:#aaa;
+                                transition:0.5s;
+
+                                &:hover {
+                                    color:#a38348;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .btnCall {
+            position:absolute; right:35px; top:50%; transform:translateY(-50%);
+            font-size:18px; color:#a38348; display:none;
+        }
+
+        .menuMo {
+            position:fixed; top:0px; left:-270px; background:#f5f4f1; z-index:10; width:270px; height:100%; box-sizing:border-box; padding:34px 30px; transition:0.5s; border-right:1px solid rgba(163, 131, 72, 0.4);
+
+            &.on {
+                left:0px;
+            }
+
+            h1 {
+                position:absolute; left:20px; bottom:20px;
+
+                >a {
+                    display:block; font:20px/1 "Playfair Display";
+                    color:#a38348; letter-spacing:1px;
+                }
+                span {font:12px/1 "arial"; color:#aaa; }
+            }
+
+            .searchBar {
+
+                position: absolute; left:50%; transform:translateX(-50%); top:50px;
+
+                >input[type=text] {
+                    float:left;
+                    width:110px; height:20px;
+                    padding:0px 5px;
+                    box-sizing: border-box;
+                    border-top: none; border-right: none;
+                    border-left: none;
+                    border-bottom:1px solid #dbd9d4;
+                    background:#f5f4f1;
+                    font:10px/20px "arial"; color:#ccc;
+                }
+
+                a {
+                    float: left;
+                    font:14px/20px "arial"; color:#666;
+                    padding:0px 5px;
+                }
+            }
+
+            #gnbMo { position:absolute; left:50%; transform:translateX(-50%); top:100px;
+                li {
+                    a {
+                        display:block; width:100%; padding:8px 0px; margin:8px 0px;
+                        font:22px/1 "arial";
+                        color: rgba(163, 131, 72, 0.6); text-align:center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* ---------------tablet----------------*/
+@media screen and (max-width:$tablet) {
+    #header {
+        .inner {
+            width:100%; padding:0px 30px; box-sizing:border-box;
+    
+            .menuWeb { display:none;}
+    
+            .btnCall {display:block;}
+        }
+    }
+}
+
+/* ---------------c.p----------------*/
+@media screen and (max-width:$mobile) {
+    // header
+}

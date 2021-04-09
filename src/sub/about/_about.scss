@@ -1,0 +1,172 @@
+.about {
+    .sub_visual {
+        background:url(../img/bg6.jpg) no-repeat center/cover;
+        position: relative;
+
+        &::before {
+            content: ""; position: absolute; top: 0; right: 0; bottom: 0; left: 0; background-color: rgba(0, 0, 0, 0.3); display: block;
+        }
+        
+        .inner1 {
+            h1 {
+                &::before {content:"ABOUT"; opacity: 0.3;}
+                &::after {background:#f5f4f1;}
+
+                span {color:#f5f4f1;}
+            }
+        }
+    }
+
+    .inner2 {
+
+        >h1 {
+            font:20px/1 "Noto Serif KR"; color:#444; margin-bottom: 100px;
+            text-align: center;
+
+            &:nth-of-type(2) {margin-bottom:40px;}
+        }
+
+        .overview {
+            article { width:100%; margin-bottom:120px;
+                h1 {
+                    float:left; width:30%;
+                    font:20px/1 "Noto Serif KR"; color:#444;
+    
+                    &::before {
+                        content:""; display:block; width:20px; height:2px;
+                        background:#a38348; margin-bottom:5px;
+                    }
+                }
+    
+                p {
+                    float:left; width:70%;
+                    font:14px/1.8 "arial"; color:#888;
+                }
+    
+                ul {
+                    float:left; width:70%;
+    
+                    li {
+                        float:left; width:48%; margin-right:4%;
+    
+                        &:nth-of-type(2n) {margin-right:0%;}
+                        &:nth-of-type(1), &:nth-of-type(2) {margin-bottom:50px;}
+    
+                        .pic {
+                            float: left; width:50px; height:70px; margin-right:20px;
+                            background-repeat:no-repeat; background-position:center;
+                            background-size:contain;
+                        }
+    
+                        &:nth-of-type(1) .pic {background-image:url(../img/value1.png);}
+                        &:nth-of-type(2) .pic {background-image:url(../img/value2.png);}
+                        &:nth-of-type(3) .pic {background-image:url(../img/value3.png);}
+                        &:nth-of-type(4) .pic {background-image:url(../img/value4.png);}
+    
+                        .text {
+                            float: left;
+                            h2 {
+                                font:16px/2 "Playfair Display"; color:#666;
+                            }
+    
+                            p {width:100%;}
+                        }
+                    }
+                }
+    
+            }
+
+            &::after {
+                content:""; display:block; border-bottom: 1px solid #ddd;
+                margin-bottom:100px;
+            }
+        }
+
+        .division {
+            width:100%; height:480px; background:url(../img/department.jpg) no-repeat center/contain;
+
+            .div_tree {
+                opacity:0; position:absolute; top:-9999px;
+            }
+        }
+    }
+}
+
+/* ---------------tablet----------------*/
+@media screen and (max-width:$tablet) {
+    // content
+    .about {
+        .inner2 {
+            .division {
+                height:38vw;
+            }
+        }
+    }
+
+}
+
+/* ---------------C.P----------------*/
+@media screen and (max-width:$mobile) {
+    $ht : 50px; //블록 높이
+    $gap : 20px; //블록사이 간격
+    // content
+    .about {
+        .inner2 {
+            .division {
+                height:auto; background:none;
+                
+                .div_tree {
+                    opacity:1; position:relative; top:0px;
+    
+                    li {
+                        //1depth
+                        span {
+                            display:block; width:40%; height:50px; background:#a38348; margin-bottom:20px;
+                            font:18px/50px "Playfair Display"; color:#fff; text-align:center;
+    
+                            &::after {
+                                content:""; display:block; width:1px; background:#a38348; position:absolute; left:50px; top:$ht;
+                                height:(($ht + $gap) * 17) - ($ht / 2);
+                            }
+                        }
+    
+                        ul li {
+                            //2depth
+                            span {
+                                background:rgba(163, 131, 72,0.1); border:1px solid #a38348;
+                                box-sizing: border-box;
+                                font:14px/50px "Noto Serif KR"; color:#a38348;
+                                transform:translateX(70px);
+    
+                                &::before {
+                                    content:""; display:block; width:20px; height:1px; background:#a38348;
+                                    position:absolute; top:50%; left:-20px;
+                                }
+                                
+                            }
+    
+                            &:nth-of-type(1) span::after {display:none;}
+                            &:nth-of-type(2) span::after {display:none;}
+                            &:nth-of-type(3) span::after {height:(($ht + $gap) * 2) - ($ht / 2);}
+                            &:nth-of-type(4) span::after {height:(($ht + $gap) * 3) - ($ht / 2);}
+                            &:nth-of-type(5) span::after {height:(($ht + $gap) * 2) - ($ht / 2);}
+                            &:nth-of-type(6) span::after {height:(($ht + $gap) * 3) - ($ht / 2);}
+                            &:nth-of-type(7) span::after {height:(($ht + $gap) * 2) - ($ht / 2);}
+    
+                            //3depth
+                            ul li {
+                                span {
+                                    background:#fff;
+                                    transform:translateX(140px);
+    
+                                    &::after {display:none;}
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

@@ -1,0 +1,321 @@
+.member {
+    .sub_visual {
+        background:url(../img/bg5.jpg) no-repeat center/cover;
+        position: relative;
+
+        &::before {
+            content: ""; position: absolute; top: 0; right: 0; bottom: 0; left: 0; background-color: rgba(0, 0, 0, 0.3); display: block;
+        }
+        
+        .inner1 {
+            h1 {
+                &::before {content:"JOIN US"; opacity: 0.3;}
+                &::after {background:#f5f4f1;}
+
+                span {color:#f5f4f1;}
+
+            }
+        }
+    }
+
+    .inner2 {
+
+        .agreeBox {
+            h2 {
+                font:22px/1 "arial"; color:#333;
+                
+                &::after {
+                    content:""; display:block; width:100%; height:1px; background:#777;
+                    margin-top: 30px; margin-bottom: 20px;
+                    
+                }
+                
+            }
+    
+            textarea {
+                width:100%; height:170px; background:#ecebe8; border:none;
+                padding:20px; box-sizing:border-box; font:13px/1.6 "arial"; color:#666;  resize: none; 
+                margin-bottom:10px;
+            }
+    
+            .agreement { font:14px/1 "arial"; color:#444; text-align: right; margin-bottom: 60px;
+    
+                &:nth-of-type(2){margin-bottom: 140px;}
+                &.error {color:#e68442;}
+    
+                input[type=checkbox] {margin-right:7px;}
+            }
+        }
+
+
+
+        .wrap { width: 100%; margin-bottom:30px;
+            h2 {
+                font:22px/1 "arial"; color:#333; float:left; 
+            }
+    
+            p {font:13px/1 "arial"; color:#333; float:right;}
+        }
+
+        .category { margin-bottom:70px;
+            tr {
+                &:nth-of-type(1) th, &:nth-of-type(1) td {padding-top:40px;}
+                &:nth-last-of-type(1) th, &:nth-last-of-type(1) td {padding-bottom:40px;}
+
+                td {
+                    >div {
+                        display:inline-block; margin-right: 60px;
+
+                        font:13px/1 "arial"; color:#444;
+                        input[type=radio] {margin-right:7px; 
+                        }
+
+                        &.error {background:#eecabe;}
+                    }
+                }
+            }
+        }
+
+        table {
+            width:100%; border-bottom:1px solid #ccc; margin-bottom:50px;
+            tr {
+                &:nth-of-type(1) {
+                    border-top: 1px solid #777;
+                }
+
+                &:nth-of-type(1) th, &:nth-of-type(1) td {padding-top:60px;}
+                &:nth-last-of-type(1) th, &:nth-last-of-type(1) td {padding-bottom:60px;}
+
+                th { width:20%; padding:20px 0px; text-align:left; box-sizing: border-box;
+                    font:bold 13px/1 "arial"; color:#444;
+
+                    span{font:bold 14px/1 "arial"; color:#777;}
+
+                }
+
+                td { width:80%; padding:20px 0px; text-align:left; box-sizing: border-box;
+                    font:13px/1 "arial"; color:#444;
+
+                    input[type=text], input[type=password] {width:38%; height:30px;
+                    border:1px solid #ccc; background:#f5f4f1; padding-left:15px; box-sizing: border-box;
+
+                    &.error {background:rgb(247, 238, 235); border:1px solid #e68442;}
+                }
+
+                    select {
+                        width:12%; height:31px; margin-right:0.5%; padding-left:10px; box-sizing: border-box;
+                        border:1px solid #ccc; background:#f5f4f1;
+                        font:12px/1 "arial"; color:#444; margin-top:10px;
+
+                        &.error {background:#f7eeeb; border:1px solid #e68442;}
+
+                    }
+
+                    input[type=checkbox] {margin-right:7px; margin-left:25px;
+
+                        &:nth-of-type(1) {margin-left:0px;}
+                    }
+
+                    p {
+                        font:11px/1 "arial"; color:#444; margin-top:10px;
+                        &.error {color:#db4343;}
+                    
+                    }
+
+                }
+
+                .address {
+                    input[type=text] {
+                        margin-bottom:12px;
+
+                        &:nth-of-type(1) {width:27%;}
+                        &:nth-of-type(2) {display:block;}
+                        &:nth-of-type(3) {display:block;}
+
+                        &.error {background:#f7eeeb; border:1px solid #e68442;}
+                    }
+
+                    a {
+                        display: inline-block; border:1px solid #777;
+                        width:10.3%; margin-bottom:12px; padding:10px 0px;
+                        font:11px/1 "arial"; color:#666; text-align: center;
+                    }
+
+                }
+
+                .contact { font:13px/1 "arial"; color:#444;
+                    input[type=text] {width:11.8%;}
+                    input[type=radio] {margin-left: 20px; margin-right:3px;}
+
+                    >div {
+                        display: inline-block;
+                        &.error {background:#eecabe;}
+                    }
+                }
+
+                .email {
+                    input[type=text] {width:18%;}
+                    select {width:19.5%;}
+                }
+
+                .receive {
+                    div {
+                        display:inline-block; margin-right: 25px;
+                    }
+                    span{font:11px/1.4 "arial"; color:rgb(155, 97, 79);}
+                }
+            }
+        }
+
+        .survey { margin-bottom:80px;
+            tr {
+                &:nth-of-type(1) th, &:nth-of-type(1) td {padding-top:40px;}
+                &:nth-last-of-type(1) th, &:nth-last-of-type(1) td {padding-bottom:40px;}
+
+                td { font:13px/1 "arial"; color:#444;
+                    input[type=radio] {margin-right:7px;
+                    }
+
+                    div {
+                        display:inline-block; margin-right:60px;
+                    }
+                }
+            }
+        }
+
+        input[type=submit] {
+            display:block; width:220px; height:40px; background:#333; margin:0px auto;
+            font:12px/1 "airal"; color:#eee; border:none; cursor: pointer;
+        }
+
+    }
+}
+
+/* ---------------tablet----------------*/
+@media screen and (max-width:$tablet) {
+    //content
+    .member {
+        .inner2 {
+    
+            .category { 
+                tr {
+                    td {
+
+                        >div {
+                            display: inline-block; margin-bottom: 10px;
+                            
+                        }
+                    }
+                }
+            }
+    
+            table {
+
+                tr {
+                    th { width:25%;}
+                    td { width:75%;
+                        input[type=text], input[type=password] {width:50%;}
+    
+                        select {
+                            width:16%; margin-right:0.6%;
+                        }
+    
+                    }
+    
+                    .address {
+                        input[type=text] {
+                            &:nth-of-type(1) {width:35%;}
+                        }
+    
+                        a {width:14.3%;}
+    
+                    }
+    
+                    .contact {
+                        input[type=text] {width:15.8%;}
+                        input[type=radio] { 
+                            &:nth-of-type(1) {margin-left: 0px;}
+                        }
+
+                        >div {
+                            display:block; margin-top: 15px;
+                            
+
+                        }
+                    }
+    
+                    .email {
+                        input[type=text] {width:24.8%;}
+                        select {width:24.8%;}
+                    }
+    
+                    .receive {
+                        div {margin-bottom: 5px;}
+                        span{margin-top:5px; display:block;}
+                    }
+                }
+            }
+    
+
+    
+        }
+    }
+}
+
+
+/* ---------------c.p----------------*/
+@media screen and (max-width:$mobile) {
+
+    .member {
+        .inner2 {
+            
+            table {
+
+                tr {
+                    th { width:30%;}
+                    td { width:70%;
+                        input[type=text], input[type=password] {width:100%;}
+    
+                        select {
+                            width:32.1%; margin-right:0%;
+                        }
+    
+                    }
+    
+                    .address {
+                        input[type=text] {
+                            &:nth-of-type(1) {width:65%;}
+                        }
+    
+                        a {width:32.3%;}
+    
+                    }
+    
+                    .contact {
+                        input[type=text] {width:29.5%;}
+                        input[type=radio] {margin-left: 20px; margin-right:3px;}
+                    }
+    
+                    .email {
+                        input[type=text] {width:49.2%;}
+                        select {width:49%;}
+                    }
+    
+                }
+            }
+    
+            .survey {
+                tr {
+                    td {
+                        input[type=checkbox] { margin-left: 50px;}
+
+                        div {
+                            display:block; margin-bottom: 10px;
+                        }
+                    }
+                }
+            }
+    
+        }
+    }
+}

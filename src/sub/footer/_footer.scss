@@ -1,0 +1,114 @@
+#footer_sub { width:100%; padding:40px 0px; background:rgb(63, 62, 61);
+    .upper {
+        .inner { width:1180px; margin:0px auto; border-bottom:1px solid #777;
+            ul{ margin-bottom:20px;
+                &::after {content:""; display:block; clear:both;}
+    
+                li {
+                    float:left;
+                    a {
+                        font:11px/1 "arial"; color:#ccc; display:block;
+                        border-right:1px solid #ccc; padding:0px 15px;
+                        box-sizing: border-box;
+                    }
+        
+                    &:nth-of-type(1) a {padding-left:0px;}
+                    &:last-child a {border-right:none;}
+                }
+            }
+    
+            p {
+                font:10px/1.8 "airal"; color:#777; margin-bottom:25px;
+
+                a {font:10px/1.8 "airal"; color:#777;}
+            }
+        }
+    }
+
+    .lower {
+        .inner {
+            width:1180px; margin:0px auto; margin-top:25px;
+
+            .wrap {
+                p {
+                    font:10px/1 "airal"; color:#777; float:left;
+                }
+
+                ul {float:right;
+                    li {float:left;
+                        a {
+                            display: block; font-size:17px; color:#777;
+                            margin-right: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* ---------------tablet----------------*/
+@media screen and (max-width:$tablet) {
+    #footer_sub {
+        .upper {
+            .inner { width:100%; padding:0px 30px; box-sizing:border-box;
+            }
+        }
+
+        .lower {
+            .inner {
+                width:100%; padding:0px 30px; box-sizing:border-box; 
+
+                .wrap {
+                    p {
+                        font:10px/1 "airal"; color:#777; float:left;
+                    }
+
+                    ul {float:right;
+                        li {float:left;
+                            a {
+                                display: block; font-size:17px; color:#777;
+                                margin-right: 15px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* ---------------c.p----------------*/
+@media screen and (max-width:$mobile) {
+    #footer_sub {
+        .upper {
+            .inner {
+                ul{ width:100%;
+                    li { width:(100% /4); text-align:center;
+                        a {
+                            font:11px/1.4 "arial";
+                        }
+                    }
+                }
+            }
+        }
+    
+        .lower {
+            .inner {
+                .wrap {
+                    p {
+                       width:100%; text-align:center; float: none; margin-bottom: 15px;
+                    }
+    
+                    ul {float:none; text-align: center;
+                        li {float:none; display: inline-block;
+                            a {
+                                display: inline-block;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

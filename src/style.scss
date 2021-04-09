@@ -1,0 +1,113 @@
+@charset 'utf-8';
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Noto+Sans+KR:wght@300&family=Noto+Serif+KR:wght@300&family=Playfair+Display:wght@500&display=swap');
+
+// reset
+* {margin:0px; padding:0px;}
+ol, ul {list-style:none;}
+a {text-decoration:none;}
+table {border-collapse:collapse;}
+fieldset {border:none;}
+.wrap::after {content:""; display:block; clear:both;}
+.hidden {position: absolute; top:-9999px; opacity: 0; z-index: -9999;}
+
+$tablet: 1179px;
+$mobile :539px;
+
+//main css 연결
+@import "main/header/header";
+@import "main/visual/visual";
+@import "main/brand/brand";
+@import "main/gall/gall";
+@import "main/banner/banner";
+@import "main/commu/commu";
+@import "main/footer/footer";
+@import "sub/data/cookiePopup";
+
+//sub content
+.content {
+    width:100%; padding-bottom:100px; background:#f5f4f1;
+
+    .sub_visual { border-bottom:1px solid #ccc;
+        .inner1 { width:1180px; margin:0px auto; height:300px; position:relative;
+
+            h1 {
+
+                span {font:40px/1 "Playfair Display"; color:#333;
+                    position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); z-index:3; 
+                    }
+
+                &::before { content:"Title"; display:block; position:absolute;
+                    left:-10px; top:50%; transform:translateY(-60%); font:150px/1 "Playfair Display"; color:#eae9e9;
+                    z-index:1;}
+
+                &::after {
+                    content:""; display:block; width:30px; height:3px; background:#333; position: absolute; top:110px; left:50%;
+                    transform:translateX(-50%); z-index:3;
+                }
+            }
+    
+            h2 { font:12px/1 "arial"; color:#ddd;
+                position:absolute; left:0px; bottom:15px;
+                span { color:#eee;
+                }
+            }
+        }
+    }
+
+    .inner2 {
+        width:1180px; margin:150px auto 80px; min-height:150px;
+    }
+}
+
+/* ---------------tablet----------------*/
+@media screen and (max-width:$tablet) {
+    .content {
+        padding-bottom:80px;
+    
+        .sub_visual { width:100%; overflow: hidden;
+            .inner1 { width:100%; 
+                h1 {
+                    &::before {
+                        left:30px; font:100px/1 "Playfair Display";
+                    }
+                }
+
+                h2 {left:30px;}
+            }
+        }
+    
+        .inner2 {
+            width:100%; padding:0px 30px; box-sizing:border-box;
+        }
+    }
+}
+
+/* ---------------c.p----------------*/
+@media screen and (max-width:$mobile) {
+    .content {
+        padding-bottom:50px;
+    
+        .sub_visual {
+            .inner1 { 
+                h1 {
+                    &::before {
+                        left:50%; transform:translate(-50%, -65%);
+                        top:50%; font:65px/1 "Playfair Display";
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+//sub css 연결
+@import "sub/header/header";
+@import "sub/footer/footer";
+@import "sub/about/about";
+@import "sub/community/community";
+@import "sub/faq/faq";
+@import "sub/gallery/gallery";
+@import "sub/youtube/youtube";
+@import "sub/member/member";
+@import "sub/location/location";

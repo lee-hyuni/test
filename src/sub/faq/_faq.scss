@@ -1,0 +1,306 @@
+.faq {
+    .sub_visual {
+        background:url(../img/bg1.jpg) no-repeat center/cover;
+        position: relative;
+
+        &::before {
+            content: ""; position: absolute; top: 0; right: 0; bottom: 0; left: 0; background-color: rgba(0, 0, 0, 0.3); display: block;
+        }
+        
+        .inner1 {
+            h1 {
+                &::before {content:"FAQ"; opacity: 0.3;}
+                &::after {background:#f5f4f1;}
+
+                span {color:#f5f4f1;}
+
+            }
+        }
+    }
+
+    .inner2 {
+
+        h1 {
+            font:20px/1 "Noto Serif KR"; color:#444; margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .list { width:100%; text-align: center; margin-bottom:60px;
+
+            li {
+                display:inline-block; margin:0px 20px;
+
+                a {
+                    display:block; padding:10px 20px;
+                    font:12px/1 "arial"; color:#555;
+                    border-bottom:2px solid #bbb;
+                    transition:0.5s;
+
+                    &:hover {
+                        transform:translateY(-5px);
+                    }
+
+                    &.on {
+                        font:bold 12px/1 "arial"; color:#444;
+                        border-bottom:2px solid #999;
+
+                    }
+                }
+            }
+        }
+
+        .searchBox {
+            width:100%; background:#eae9e9; padding:30px; box-sizing:border-box;
+            margin-bottom: 60px; position: relative; text-align:center;
+
+            select {
+                background:#f5f4f1; border:none; width:15%; height:30px;
+                padding:5px; box-sizing: border-box;
+                margin-right:10px;
+            }
+
+            .search {
+                display: inline-block; padding:5px; box-sizing:border-box;
+                background:#f5f4f1; width:60%; text-align:left;
+                a { 
+                    font-size:16px; color:#555; background:#f5f4f1;
+                    padding:0px 10px 0px 5px; border-right:1px solid #bbb;
+                    
+                }
+                input[type=text] {
+                    background:#f5f4f1; border:none;  height:20px;
+                    padding:0px 15px; box-sizing: border-box;
+                    font:14px/1 "arial"; color:#777; width:90%;
+                }
+            }
+        }
+
+
+        .faqTab {
+            width:100%; margin-bottom: 60px;
+        
+            dl { border-top:1px solid #777;
+                
+                dt {
+                    width:100%; box-sizing:border-box; padding:40px 70px; background:#f5f4f1;
+                    border-bottom:1px solid #ccc;
+                    transition:0.5s; cursor:pointer; position:relative;
+        
+                    span {
+                        position:absolute; right:70px; top:50%; transform:translateY(-50%);
+                        font-size:15px; color:#a38348;
+                    }
+
+                    .down {display:block;}
+                    .up {display:none;}
+
+
+                    .iconQ {
+                        float:left; font:30px/1 "EB Garamond"; color:#a38348;
+                        margin-right: 50px;
+                    }
+
+                    .tabtxt {
+                        float: left;
+
+                        a {font:15px/2.3 "arial"; color:#666;}
+                    }
+
+                    &:hover {
+                        background:#f0eeec;
+                        .tabtxt {
+                            a {border-bottom:1px solid #555;}
+                        }
+                    }
+        
+                    &.on {
+                        .tabtxt {font:bold 15px/1 "arial"; color:#555; }
+                        .down {display:none;}
+                        .up {display:block;}
+                    }
+                }
+        
+                dd {
+                    width:100%; box-sizing:border-box; padding:40px 70px; background:#eae9e9;
+                    display:none;
+
+                    .wrap{ width:100%;
+                        .iconA {
+                            float:left;
+                            font:30px/1 "EB Garamond"; color:#888;
+                            margin-right: 50px; box-sizing: border-box;
+                        }
+    
+                        >p {
+                            float:left; width:90%;
+                            font:15px/2 "arial"; color:#666;
+                        }
+                    }
+
+                    
+                }
+            }
+        }
+
+        #list2, #list3, #list4, #list5 {display:none;}
+
+        .pagination {
+            width:100%; text-align: center; margin-bottom: 100px;
+
+            &::after {
+                content: ""; display:block; clear:both;
+            }
+            .numbers {
+                display:inline-block; font-size: 0;
+
+                a {
+                    display:inline-block; border:1px solid #a38348;
+                    width:30px; height:30px; font:12px/30px "arial"; color:#706041;
+                    text-align: center; margin:0px 5px; transition: 0.5s;
+
+                    &.on {
+                        border:1px solid #a38348; background:#a38348; color:#fff;
+                    }
+
+                    &.prev, &.next {
+                        border:1px solid #a38348; background:#a38348; color:#fff;
+                    }
+
+                    &:hover {
+                        background:#a38348; color:#fff;
+                    }
+                }
+            }
+        }
+
+        .askBox {
+            width:100%; background:#eae9e9; padding:50px 120px; box-sizing:border-box;
+            .wrap {
+                img {float: left; margin-right: 40px;}
+                p {float: left; font:14px/1.8 "Noto Sans KR"; color:#666; }
+                a {
+                    float:right; padding:7px 25px; border:1px solid #666;
+                    font:bold 14px/1.8 "Noto Sans KR"; color:#444;
+                    transform:translateY(20%); transition:0.5s;
+
+                    &:hover {
+                        background:#666; color:#fff; transform:translateY(20%)translateX(10px);
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* ---------------tablet----------------*/
+@media screen and (max-width:$tablet) {
+    // content
+    .faq {
+        .inner2 {
+            .list {
+                li {
+                    a {
+                        margin-bottom:15px;
+                    }
+                }
+            }
+
+            .searchBox {
+                select {margin-right:10px;}
+    
+                .search {
+                    input[type=text] {width:80%;}
+                }
+            }
+    
+            .faqTab {
+                width:100%; margin-bottom: 60px;
+            
+                dl {
+                    dt {
+                        .tabtxt { 
+                            width:60%;
+                        }
+                    }
+            
+                    dd {
+                        .wrap{ 
+                            p {width:75%;}
+                        }
+                    }
+                }
+            }
+    
+            .askBox {
+                padding:40px 80px;
+                .wrap {
+                    img {margin-right:5%;}
+                    p {float: none; display: inline-block; width:50%}
+                    a {
+                        padding:7px 15px;
+                    }
+                }
+            }
+        }
+    }
+    
+
+}
+
+/* ---------------C.P----------------*/
+@media screen and (max-width:$mobile) {
+    // content
+    .faq {
+        .inner2 {
+            .list {margin-bottom:30px;}
+
+            .searchBox {
+
+                select {
+                    margin-right:0px;
+                    margin-bottom: 10px;
+                    width:100%;
+                }
+
+                .search {
+                    width:100%;
+                    input[type=text] {width:80%;}
+                }
+            }
+    
+            .faqTab {
+                dl {       
+                    dt { padding:40px 30px;
+
+                        span {
+                            right:30px;
+                        }
+
+                        .iconQ {
+                            margin-right: 20px;
+                        }
+                    }
+            
+                    dd { padding:40px 30px;
+
+                        .wrap{ 
+                            p {width:65%;}
+                        }
+                    }
+                }
+            }
+    
+            .askBox { 
+                padding:30px 40px 50px;
+                .wrap { text-align:center ;
+                    img {float:none; display:block; margin:10px auto;}
+                    p {float:none; display: block; width:100%; margin-bottom:20px;}
+                    a {
+                        float: none;
+                    }
+                }
+            }
+        }
+    }
+
+}
