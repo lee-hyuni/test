@@ -234,7 +234,7 @@
 					&:nth-of-type(1) {margin-right:30%;}
 
 					span {
-						font:20px/1 "Playfair Display"; color:#ddd;
+						font:20px/1 "Playfair Display"; color:#eee;
 						display:block;
 						position:absolute;
 						top: -30px; left:-26px;
@@ -392,7 +392,7 @@
 /* tablet */
 @media screen and (max-width:$tablet) {
 
-    #navi {display:none;}
+    #scrollBtn {display:none;}
 }
 
 /* mobile */

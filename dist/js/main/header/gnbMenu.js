@@ -5,15 +5,12 @@ $(document).ready(function(){
     var $sub = $gnb_li.find(".sub");
     var speed = 500;
 
-    //브라우저 리사이즈시 다시 세로 위치값 갱신
-    //$(window).on("resize", setPos );
-
     $(window).on("scroll",function(){
         var scroll = $(this).scrollTop();
-        if( scroll >= 300){
+        if( scroll >= 900){
             $header.slideDown();
         }
-        if( scroll < 300){
+        else{
             $header.slideUp();
         }
     });
@@ -40,7 +37,8 @@ $(document).ready(function(){
                 $("<div class='bgGnb'>")
                     .css({
                         width:"100%",  height:ht, backgroundColor:bg, 
-                        position:"absolute", left:0, top:posY, display:"none"
+                        position:"absolute", left:0, top:posY, display:"none",
+                        borderBottom: "1px solid rgba(163, 131, 72, 0.4)"
                     })
             )
         }
